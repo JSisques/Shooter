@@ -1,5 +1,5 @@
 var constants = {
-    appName = "Shorter"
+    appName = "Shooter"
 }
 
 module.exports = constants;
