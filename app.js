@@ -14,7 +14,7 @@ app.use(require('./server/services/welcome/routes'))
 app.use(require('./server/services/gallery/routes'))
 
 // Servimos archivos estáticos en la carpeta public
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname + '/public')))
 
 // Starting server at 8080
 app.listen(app.get('port'), function () {
