@@ -7,4 +7,11 @@ router.get('/gallery', function (request, response) {
     })
 });
 
+router.get('/gallery/:ID', function (request, response) {
+    var id = request.params.ID
+    response.render('detail.html', {
+        title: "Galería"
+    })
+});
+
 module.exports = router;
