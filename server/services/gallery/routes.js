@@ -7,10 +7,25 @@ router.get('/gallery', function (request, response) {
     })
 });
 
-router.get('/gallery/:ID', function (request, response) {
-    var id = request.params.ID
-    response.render('detail.html', {
+router.get('/gallery/:YEAR/:MONTH/:DAY', function (request, response) {
+    var year = request.params.YEAR
+    var month = request.params.MONTH
+    var day = request.params.DAY
+    
+    response.render('gallery.html', {
         title: "Galería"
+    })
+});
+
+router.get('/gallery/:YEAR/:MONTH/:DAY/:ID', function (request, response) {
+    var year = request.params.YEAR
+    var month = request.params.MONTH
+    var day = request.params.DAY
+    var id = request.params.ID
+
+    response.render('detail.html', {
+        title: "Detalles",
+        image: null
     })
 });
 

@@ -18,5 +18,5 @@ app.use(express.static(path.join(__dirname + '/public')))
 
 // Starting server at 8080
 app.listen(app.get('port'), function () {
-    console.log('Servidor iniciado en http://localhost:' + app.get('port'))
-  })
+  console.log('Servidor iniciado en http://localhost:' + app.get('port'))
+})

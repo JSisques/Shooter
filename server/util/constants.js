@@ -1,5 +1,6 @@
 var constants = {
-    appName = "Shooter"
+    appName = "Shooter",
+    pathUploadImage = "tmp/"
 }
 
 module.exports = constants;

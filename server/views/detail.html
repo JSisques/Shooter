@@ -18,24 +18,62 @@
         <!-- Page Content -->
         <div class="container-fluid">
 
-            <h1 class="fw-light text-center text-lg-start mt-4 mb-0">
-                <%= title%>
-            </h1>
+            <div class="container-fluid">
+                <h1 class="fw-light text-center text-lg-start mt-4 mb-0">
+                    <%= title%>
+                </h1>
+                <hr class="mt-2 mb-2">
+            </div>
 
-            <hr class="mt-2 mb-5">
+            
 
-            <div class="row text-center text-lg-start">
+            <div class="row text-center pt-4 pb-4 container-fluid">
 
-                <div class="w-50 p-3">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+                <!--
+                <div class="container-fluid col-md-7">
+                    <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                </div>
+                -->
+
+       
+                
+                <div class="col-md-7 h-100 my-auto">
+                    <img class="img-fluid img-thumbnail" src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80" alt="">
 
                 </div>
+
+                <div class="col-md-5 h-100 my-auto mt-4 mb-4">
+                    <div class="container-fluid text-lg-start h-100 my-auto">
+                        <p>Nombre del archivo: prueba</p>
+                        <p>Marca de la camara: prueba</p>
+                        <p>Modelo de la camara: prueba</p>
+                        <p>ISO: prueba</p>
+                        <p>Velocidad de obturación: prueba</p>
+                        <p>Diafragma: prueba</p>
+                        <p>Extensión del archivo: prueba</p>
+                        <p>Peso de la imagen: prueba</p>
+                        <p>Fecha de creación: prueba</p>
+                    </div>
+                    
+                    <div class="container-fluid text-lg-start   mb-2">
+                        <label for="exampleFormControlTextarea1" class="form-label">Notas adicionales:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aqui tus notas..."></textarea>
+                    </div>
+                    <div class="container-fluid mt-2 mb-2">
+                        <button type="submit" class="btn btn-dark">Guardar cambios</button>
+                    </div>
+                </div>
+                
+         
 
 
             </div>
 
 
         </div>
+
+        <%- include('partials/footer.html') %>
 </body>
+
 
 </html>
