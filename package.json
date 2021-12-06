@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
+    "exif": "^0.6.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "multer": "^1.4.3",
