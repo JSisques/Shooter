@@ -1,8 +1,10 @@
 const express = require('express');
+const constants = require('../../util/constants');
 const router = express.Router();
 
 router.get('/gallery', function (request, response) {
     response.render('gallery.html', {
+        app: constants.APP_NAME,
         title: "Galería"
     })
 });

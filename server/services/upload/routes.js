@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const fs = require('fs');
+const constants = require('../../util/constants');
 
 //Multer
 const storage = multer.memoryStorage()
@@ -13,6 +14,7 @@ const upload = multer({
 
 router.get('/upload', function (request, response) {
     response.render('upload.html', {
+        app: constants.APP_NAME,
         title: "Subir archivos"
     })
 });
