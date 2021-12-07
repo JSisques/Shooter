@@ -16,90 +16,20 @@
     <%- include('partials/navbar.html')%>
     <%- include('partials/header.html')%>
         <!-- Page Content -->
-        <div class="container-fluid">
+        <div class="row container-fluid w-auto text-center">
 
+            <% for (let index = 0; index < data.length; index++) { %>
             
-
-            <div class="row text-center text-lg-start">
-
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="/gallery/1/1/1/1" class="d-block mb-4 h-100 position-relative">
-                        <img class="img-fluid img-thumbnail"  src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
-                            alt="">
-                            <p class="position-absolute top-50 start-50 translate-middle fs-3 text-black"><%= new Date().getFullYear() %></p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100 position-relative">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300"
-                            alt="">
-                            <p class="position-absolute top-50 start-50 translate-middle">adasd</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300"
-                            alt="">
-                    </a>
-                </div>
-                
+            <div class="container-fluid col-md-3 mb-4 pt-2">
+                <a href="<%= data[index].route %>" class="">
+                    <img class="img-fluid img-thumbnail w-100"  src="<%= data[index].url %>"
+                        alt="">    
+                </a>
+                <p class="w-auto h4 rounded mt-1 p-1"><%= data[index].title %></p>
             </div>
 
-            
+            <%}%>
+
         </div>
         <%- include('partials/footer.html') %>
 </body>

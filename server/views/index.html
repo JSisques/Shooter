@@ -16,14 +16,19 @@
 <body>
 
     <%- include('partials/navbar.html') %>
-    <%- include('partials/header.html')%>
+
+        <div class="container-fluid">
+            <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Bienvenido a <%= app %>
+            </h1>
+            <hr class="mt-2 mb-5">
+        </div>
 
         <div class="container-fluid">
             <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente perferendis
                 cupiditate? Accusantium earum rem officiis nam corporis ab sequi, cumque fugit. Iusto architecto a non
                 dolorem perspiciatis repudiandae hic?</p>
         </div>
-        
+
         <%- include('partials/footer.html') %>
 
 </body>

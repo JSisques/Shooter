@@ -9,9 +9,9 @@ app.engine('html', require('ejs').renderFile)
 app.set('view engine', 'ejs')
 
 //Routes
-app.use(require('./server/services/upload/routes'))
-app.use(require('./server/services/welcome/routes'))
-app.use(require('./server/services/gallery/routes'))
+app.use(require('./server/microservices/upload/routes'))
+app.use(require('./server/microservices/welcome/routes'))
+app.use(require('./server/microservices/gallery/routes'))
 
 // Servimos archivos estáticos en la carpeta public
 app.use(express.static(path.join(__dirname + '/public')))
