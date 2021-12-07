@@ -9,45 +9,39 @@ module.exports = {
     },
 
     async getYearFolders(req, res){
-        var a = [
-            {
-                title: '2020',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            },
-            {
-                title: '2021',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            },
-            {
-                title: '2022',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            },
-            {
-                title: '2023',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            },
-            {
-                title: '2024',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            },
-            {
-                title: '2025',
-                url: 'https://images.unsplash.com/photo-1638823843529-6ab0e659beae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2728&q=80',
-                route: '/gallery'
-            }
-        ]
+        
+        var path = ''
 
-        //model.getYearFolders()
-        return res.render('gallery.html', {
-            app: constants.APP_NAME,
-            title: "Galería",
-            data: a
-        })
+        return model.getFolders(req, res, path)
+    },
+
+    async getMonthFolders(req, res){
+        var year = req.params.YEAR
+
+        var path = year + '/'
+
+        return model.getFolders(req, res, path)
+    },
+
+    async getDayFolders(req, res){
+        var year = req.params.YEAR
+        var month = req.params.MONTH
+
+        var path = year + '/' + month + '/'
+        console.log(path)
+
+        return model.getFolders(req, res, path)
+    },
+
+    async getImages(req, res){
+        var year = req.params.YEAR
+        var month = req.params.MONTH
+        var day = req.params.DAY
+
+        var path = year + '/' + month + '/' + day + '/'
+        console.log(path)
+
+        return model.getImages(req, res, path)
     },
 
     async getPage(req, res){
